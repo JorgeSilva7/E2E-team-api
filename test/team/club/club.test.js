@@ -1,13 +1,13 @@
 import { expect } from "@jest/globals";
 import request from "../../request";
-import login from "../../login";
+import loginAdmin from "../../login";
 
 const clubEndpoint = "/clubs/";
 
 describe("POST club/", () => {
   let token;
   beforeAll(async () => {
-    token = await login();
+    token = await loginAdmin();
   });
 
   it("[ERROR] return an error when the authorization token is not provided", async () => {

@@ -1,9 +1,10 @@
 import request, { teamService } from "./request";
 
-async function login() {
-  const response = await request().post("/auth/login").send(teamService.login);
+async function loginAdmin(admin = true) {
+  const credentials = admin ? teamService.loginAdmin : teamService.loginUser;
+  const response = await request().post("/auth/login").send(credentials);
 
   return response.body.token;
 }
 
-export default login;
+export default loginAdmin;

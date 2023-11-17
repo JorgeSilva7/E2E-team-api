@@ -2,8 +2,12 @@ import supertest from "supertest";
 
 export const teamService = {
   BASE_URL: "http://localhost:3000",
-  login: {
+  loginAdmin: {
     email: "jorgeandres.silva@ufrontera.cl",
+    password: "123asd",
+  },
+  loginUser: {
+    email: "johndoe@gmail.com",
     password: "123asd",
   },
 };
