@@ -9,7 +9,7 @@ describe("POST /clubs/:clubId/members", () => {
   let clubId;
   let nonAdminToken;
   let clubMembersEndpoint;
-  let getClubId = async (token, email) => {
+  const getClubId = async (token, email) => {
     const club = await getClub(token, email);
     return club._id;
   };
