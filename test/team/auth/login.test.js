@@ -31,7 +31,7 @@ describe("POST auth/login", () => {
   it("[SUCCESS] login success", async () => {
     const response = await request()
       .post(loginEndpoint)
-      .send(teamService.login)
+      .send(teamService.loginAdmin)
       .expect(200);
 
     expect(response.body).toHaveProperty("token");
